@@ -1,0 +1,477 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI StudyMate - Smart Study Assistant</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Main Dashboard Layout -->
+    <div class="dashboard">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <div class="logo">
+                <h2>🎓 StudyMate</h2>
+            </div>
+
+            <nav class="sidebar-nav">
+
+                <a href="#dashboard">🏠 Dashboard</a>
+
+                <a href="#chatbot">🤖 AI Chatbot</a>
+
+                <a href="#notes">📝 Notes Summarizer</a>
+
+                <a href="#quiz">🧠 Quiz Generator</a>
+
+                <a href="#planner">📅 Study Planner</a>
+
+                <a href="#progress">📊 Progress Tracker</a>
+
+                <a href="#pdf">📚 PDF Assistant</a>
+
+            </nav>
+
+            <div class="sidebar-footer">
+                <p>AI StudyMate v1.0</p>
+                <p>Learn Smarter 🚀</p>
+            </div>
+
+        </aside>
+
+
+        <!-- Main Content -->
+        <main class="main-content" id="dashboard">
+
+            <!-- Top Navigation -->
+            <header class="topbar">
+
+                <div>
+                    <h1>Dashboard</h1>
+                    <p>Welcome back! Ready to learn something new?</p>
+                </div>
+
+                <div class="profile">
+                    <span>👨‍🎓 Student</span>
+                </div>
+
+            </header>
+
+
+            <!-- Welcome Section -->
+            <section class="welcome-section">
+
+                <div>
+                    <h2>Welcome to AI StudyMate!</h2>
+
+                    <p>
+                        Your personal AI-powered learning assistant.
+                        Learn, practice, and track your progress
+                        in one place.
+                    </p>
+                </div>
+
+                <div class="welcome-icon">
+                    🎯
+                </div>
+
+            </section>
+
+
+            <!-- Dashboard Statistics -->
+            <section class="stats-container">
+
+                <div class="stat-card">
+                    <h3>Study Hours</h3>
+                    <h2 id="studyHours">0 hrs</h2>
+                    <p>Total learning time</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Quizzes Completed</h3>
+                    <h2 id="quizCount">0</h2>
+                    <p>Practice sessions</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Average Score</h3>
+                    <h2 id="averageScore">0%</h2>
+                    <p>Your quiz performance</p>
+                </div>
+
+            </section>
+
+
+            <!-- Available Tools -->
+            <section class="tools-section" id="tools">
+
+                <h2>Your Study Tools</h2>
+
+                <div class="tools-grid">
+
+                    <a href="#chatbot" class="tool-card">
+                        <span>🤖</span>
+                        <h3>AI Chatbot</h3>
+                        <p>Ask questions and understand concepts.</p>
+                    </a>
+
+                    <a href="#notes" class="tool-card">
+                        <span>📝</span>
+                        <h3>Notes Summarizer</h3>
+                        <p>Convert lengthy notes into summaries.</p>
+                    </a>
+
+                    <a href="#quiz" class="tool-card">
+                        <span>🧠</span>
+                        <h3>Quiz Generator</h3>
+                        <p>Practice with interactive questions.</p>
+                    </a>
+
+                    <a href="#planner" class="tool-card">
+                        <span>📅</span>
+                        <h3>Study Planner</h3>
+                        <p>Organize your daily study schedule.</p>
+                    </a>
+
+                    <a href="#progress" class="tool-card">
+                        <span>📊</span>
+                        <h3>Progress Tracker</h3>
+                        <p>Monitor your learning performance.</p>
+                    </a>
+
+                    <a href="#pdf" class="tool-card">
+                        <span>📚</span>
+                        <h3>PDF Assistant</h3>
+                        <p>Ask questions from your PDF notes.</p>
+                    </a>
+
+                </div>
+
+            </section>
+
+
+            <!-- 1. AI Chatbot -->
+            <section class="chatbot" id="chatbot">
+
+                <div class="chat-header">
+
+                    <div>
+                        <h2>🤖 StudyMate AI</h2>
+                        <p>Your personal study assistant</p>
+                    </div>
+
+                    <span class="chat-status">Demo mode</span>
+
+                </div>
+
+                <div class="chat-messages" id="chatMessages">
+
+                    <div class="message bot-message">
+                        Hi! I'm StudyMate. Ask me a study question
+                        or tell me what topic you're learning.
+                    </div>
+
+                </div>
+
+                <form class="chat-form" id="chatForm">
+
+                    <input
+                        type="text"
+                        id="chatInput"
+                        placeholder="Ask a study question..."
+                        autocomplete="off"
+                        aria-label="Enter your study question"
+                    >
+
+                    <button type="submit" id="sendButton">
+                        Send
+                    </button>
+
+                </form>
+
+            </section>
+
+
+            <!-- 2. Notes Summarizer -->
+            <section class="notes-summarizer" id="notes">
+
+                <div class="notes-header">
+
+                    <h2>📝 Notes Summarizer</h2>
+
+                    <p>
+                        Turn your long notes into a shorter revision guide.
+                    </p>
+
+                </div>
+
+                <textarea
+                    id="notesInput"
+                    placeholder="Paste your study notes here..."
+                    rows="8"
+                ></textarea>
+
+                <button id="summarizeButton" type="button">
+                    Summarize Notes
+                </button>
+
+                <div class="summary-result" id="summaryResult">
+
+                    <h3>Your Summary</h3>
+
+                    <p id="summaryText">
+                        Your summary will appear here.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- 3. Quiz Generator -->
+            <section class="quiz-generator" id="quiz">
+
+                <div class="quiz-header">
+
+                    <h2>🧠 Quiz Generator</h2>
+
+                    <p>
+                        Test your knowledge with interactive quizzes.
+                    </p>
+
+                </div>
+
+                <div class="quiz-input">
+
+                    <input
+                        type="text"
+                        id="quizTopic"
+                        placeholder="Enter a topic (e.g. HTML)"
+                    >
+
+                    <button id="generateQuiz" type="button">
+                        Generate Quiz
+                    </button>
+
+                </div>
+
+                <div id="quizContainer">
+
+                    <p class="quiz-placeholder">
+                        Your questions will appear here.
+                    </p>
+
+                </div>
+
+                <div id="quizScore"></div>
+
+            </section>
+
+
+            <!-- 4. Study Planner -->
+            <section class="study-planner" id="planner">
+
+                <div class="planner-header">
+
+                    <h2>📅 Study Planner</h2>
+
+                    <p>
+                        Organize your study tasks and manage your time.
+                    </p>
+
+                </div>
+
+                <form id="plannerForm" class="planner-form">
+
+                    <input
+                        type="text"
+                        id="taskInput"
+                        placeholder="Enter subject or study task..."
+                        required
+                    >
+
+                    <input
+                        type="date"
+                        id="taskDate"
+                        required
+                    >
+
+                    <input
+                        type="time"
+                        id="taskTime"
+                        required
+                    >
+
+                    <button type="submit">
+                        Add Task
+                    </button>
+
+                </form>
+
+                <div class="planner-list">
+
+                    <h3>Your Study Tasks</h3>
+
+                    <div id="taskList">
+
+                        <p class="planner-placeholder">
+                            Your study tasks will appear here.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- 5. Progress Tracker -->
+            <section class="progress-tracker" id="progress">
+
+                <div class="progress-header">
+
+                    <h2>📊 Progress Tracker</h2>
+
+                    <p>
+                        Monitor your learning activities and performance.
+                    </p>
+
+                </div>
+
+                <div class="progress-cards">
+
+                    <div class="progress-card">
+
+                        <h3>Completed Tasks</h3>
+
+                        <h2 id="completedTasks">0</h2>
+
+                    </div>
+
+                    <div class="progress-card">
+
+                        <h3>Pending Tasks</h3>
+
+                        <h2 id="pendingTasks">0</h2>
+
+                    </div>
+
+                    <div class="progress-card">
+
+                        <h3>Quiz Performance</h3>
+
+                        <h2 id="progressQuizScore">0%</h2>
+
+                    </div>
+
+                </div>
+
+                <div class="progress-bar-container">
+
+                    <h3>Overall Task Completion</h3>
+
+                    <div class="progress-bar">
+
+                        <div
+                            class="progress-fill"
+                            id="progressFill"
+                        ></div>
+
+                    </div>
+
+                    <p id="progressPercentage">0% Completed</p>
+
+                </div>
+
+            </section>
+
+
+            <!-- 6. PDF Question Answering -->
+            <section class="pdf-assistant" id="pdf">
+
+                <div class="pdf-header">
+
+                    <h2>📚 PDF Question Answering</h2>
+
+                    <p>
+                        Upload your study PDF and ask questions
+                        based on its content.
+                    </p>
+
+                </div>
+
+                <div class="pdf-upload-area">
+
+                    <label for="pdfInput">
+                        📄 Select your PDF file
+                    </label>
+
+                    <input
+                        type="file"
+                        id="pdfInput"
+                        accept=".pdf,application/pdf"
+                    >
+
+                    <p id="pdfFileName">
+                        No PDF selected.
+                    </p>
+
+                </div>
+
+                <div class="pdf-question-area">
+
+                    <input
+                        type="text"
+                        id="pdfQuestion"
+                        placeholder="Ask a question about your PDF..."
+                    >
+
+                    <button id="askPdfButton" type="button">
+                        Ask Question
+                    </button>
+
+                </div>
+
+                <div class="pdf-answer-area">
+
+                    <h3>Answer</h3>
+
+                    <p id="pdfAnswer">
+                        Your answer will appear here.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- Footer -->
+            <footer>
+
+                <p>
+                    © 2026 AI StudyMate.
+                    Built to make learning smarter.
+                </p>
+
+            </footer>
+
+        </main>
+
+    </div>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
