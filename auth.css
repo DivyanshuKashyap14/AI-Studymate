@@ -1,0 +1,307 @@
+
+/* 1. Remove default spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 2. Main page background */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0b1020, #171333, #101b35);
+    color: white;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+}
+
+/* 3. Main container */
+.auth-container {
+    width: 100%;
+    max-width: 1050px;
+    min-height: 600px;
+
+    display: flex;
+    align-items: center;
+
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+/* 4. Left information section */
+.auth-info {
+    flex: 1;
+    padding: 60px;
+}
+
+.auth-info h1 {
+    font-size: 38px;
+    color: #a78bfa;
+    margin-bottom: 25px;
+}
+
+.auth-info h2 {
+    font-size: 30px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+.auth-info p {
+    color: #b8bfd3;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* 5. Features list */
+.features {
+    margin-top: 35px;
+}
+
+.features p {
+    margin-bottom: 18px;
+    font-size: 15px;
+    color: #d5d9eb;
+}
+
+/* 6. Right authentication box */
+.auth-box {
+    width: 430px;
+    min-height: 600px;
+
+    background: rgba(255, 255, 255, 0.06);
+
+    padding: 40px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* 7. Login and Signup tabs */
+.auth-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.auth-tabs button {
+    flex: 1;
+    padding: 12px;
+
+    background: transparent;
+    color: #b8bfd3;
+
+    border: 1px solid #393653;
+    border-radius: 8px;
+
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.auth-tabs button:hover {
+    background: rgba(139, 92, 246, 0.15);
+}
+
+.auth-tabs button.active {
+    background: linear-gradient(135deg, #7c3aed, #4f46e5);
+    color: white;
+    border-color: transparent;
+}
+
+/* 8. Form heading */
+.auth-box h2 {
+    font-size: 27px;
+    margin-bottom: 10px;
+}
+
+.form-description {
+    color: #aeb5ca;
+    font-size: 13px;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+/* 9. Input labels */
+.auth-box form > label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 9px;
+    color: #d5d9eb;
+}
+
+/* 10. Input fields */
+.auth-box form > input {
+    width: 100%;
+    padding: 13px 14px;
+
+    margin-bottom: 20px;
+
+    background: #17172b;
+    color: white;
+
+    border: 1px solid #393653;
+    border-radius: 8px;
+
+    outline: none;
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+/* Input focus effect */
+.auth-box form > input:focus {
+    border-color: #8b5cf6;
+    box-shadow: 0 0 8px rgba(139, 92, 246, 0.3);
+}
+
+/* Placeholder color */
+.auth-box input::placeholder {
+    color: #777c96;
+}
+
+/* 11. Password visibility option */
+.password-option {
+    margin-top: -8px;
+    margin-bottom: 20px;
+}
+
+.password-option label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    font-size: 13px;
+    color: #b8bfd3;
+
+    cursor: pointer;
+}
+
+.password-option input {
+    accent-color: #8b5cf6;
+    cursor: pointer;
+}
+
+/* 12. Main submit button */
+.auth-submit {
+    width: 100%;
+    padding: 14px;
+
+    background: linear-gradient(135deg, #8b5cf6, #4f46e5);
+    color: white;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.auth-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(124, 58, 237, 0.3);
+}
+
+/* 13. Form messages */
+.message {
+    min-height: 20px;
+    margin-top: 12px;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* 14. Switch between Login and Signup */
+.switch-text {
+    margin-top: 20px;
+    text-align: center;
+
+    font-size: 13px;
+    color: #aeb5ca;
+}
+
+.switch-text span {
+    color: #a78bfa;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.switch-text span:hover {
+    text-decoration: underline;
+}
+
+/* 15. Hide inactive form */
+.hidden {
+    display: none !important;
+}
+
+/* 16. Responsive design for tablets */
+@media (max-width: 850px) {
+
+    .auth-container {
+        max-width: 500px;
+        flex-direction: column;
+    }
+
+    .auth-info {
+        padding: 35px;
+        text-align: center;
+    }
+
+    .auth-info h1 {
+        font-size: 30px;
+    }
+
+    .auth-info h2 {
+        font-size: 23px;
+    }
+
+    .features {
+        display: none;
+    }
+
+    .auth-box {
+        width: 100%;
+        min-height: auto;
+    }
+}
+
+/* 17. Responsive design for mobile */
+@media (max-width: 480px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .auth-info {
+        padding: 25px 20px;
+    }
+
+    .auth-info h1 {
+        font-size: 26px;
+    }
+
+    .auth-info h2 {
+        font-size: 20px;
+    }
+
+    .auth-box {
+        padding: 25px 20px;
+    }
+
+    .auth-box h2 {
+        font-size: 23px;
+    }
+}
